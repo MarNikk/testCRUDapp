@@ -1,0 +1,86 @@
+@import "../../App.css";
+
+/* Reuse main page styles from LandingPage.css.
+   Only override/add styles specific to the signup form panel. */
+.signup-panel{
+  display:flex;
+  flex-direction:column;
+  gap:30px;
+  padding:20px;
+  border-radius:14px;
+  backdrop-filter:blur(8px);
+  background: rgba(255,255,255,0.06);
+  box-shadow: 0 12px 40px rgba(2,8,23,0.65);
+  min-width: 320px;
+  max-width: 420px;
+  width: min(90vw, 420px);
+  margin: 0 auto;
+}
+
+/* form field */
+.field{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+
+.field-label{
+  font-size:25px;
+  color: rgba(230,247,255,0.9);
+  letter-spacing:0.02em;
+}
+
+.field-input{
+  height:40px;
+  padding:10px 12px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.12);
+  background: rgba(0,6,12,0.32);
+  color:#eaf6ff;
+  font-size:20px;
+  outline:none;
+  transition: box-shadow .12s ease, border-color .12s ease, transform .12s ease;
+}
+
+.field-input::placeholder{
+  color: rgba(230,247,255,0.38);
+}
+
+/* focus style */
+.field-input:focus{
+  border-color: rgba(100,160,255,0.9);
+  box-shadow: 0 6px 22px rgba(100,160,255,0.08);
+}
+
+/* wide green submit button */
+.lp-btn--wide{
+  width:100%;
+  padding:12px 18px;
+  margin: 20px 0 0 0;
+  font-size:16px;
+  border-radius:10px;
+}
+
+/* small responsive tweak */
+@media (max-width:420px){
+  .signup-panel{ padding:16px; min-width: 280px; }
+  .field-input{ height:42px; }
+  .lp-title{ font-size:32px; margin-bottom:18px; }
+}
+
+.forgot-link{
+  display:inline-block;
+  margin-top:8px;
+  font-size:15px;
+  color: rgba(255,255,255,0.72);
+  text-decoration:underline;
+  text-underline-offset:3px;
+  transition: color .12s ease, transform .12s ease;
+}
+
+.forgot-link:hover,
+.forgot-link:focus{
+  color: rgba(255,255,255,0.95);
+  transform: translateY(-2px);
+  outline:none;
+}

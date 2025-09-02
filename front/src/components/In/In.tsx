@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Up.css";
+import "./In.css";
 import type { JSX } from "react";
 
-export default function Up(): JSX.Element {
+export default function In(): JSX.Element {
   const [nick, setNick] = useState("");
-  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
@@ -14,7 +13,7 @@ export default function Up(): JSX.Element {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // replace with real submit logic
-    console.log("signup:", { nick, email, password });
+    console.log("signup:", { nick, password });
     // example redirect after signup:
     // window.location.href = "/auth";
     navigate("/logIn")
@@ -23,7 +22,7 @@ export default function Up(): JSX.Element {
   return (
     <div className="lp-page lp-page--form">
       <div className="lp-container">
-        <div className="lp-title">logUp</div>
+        <div className="lp-title">logIn</div>
 
         <form className="signup-panel" onSubmit={handleSubmit} noValidate>
           <label className="field">
@@ -39,18 +38,6 @@ export default function Up(): JSX.Element {
           </label>
 
           <label className="field">
-            <span className="field-label">Emale</span>
-            <input
-              className="field-input"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              autoComplete="email"
-            />
-          </label>
-
-          <label className="field">
             <span className="field-label">Password</span>
             <input
               className="field-input"
@@ -62,8 +49,10 @@ export default function Up(): JSX.Element {
             />
           </label>
 
-          <button type="submit" className="lp-btn lp-btn--wite lp-btn--wide" aria-label="logUp">
-            logUp
+          <a href="/About" className="forgot-link">Forgot the password?</a>
+
+          <button type="submit" className="lp-btn lp-btn--green lp-btn--wide" aria-label="logUp">
+            logIn
           </button>
         </form>
       </div>

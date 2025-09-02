@@ -4,6 +4,7 @@ import type { JSX } from "react";
 import "./App.css";
 
 import Up from "./components/Up/Up";
+import In from "./components/In/In";
 
 function Home(): JSX.Element {
   const navigate = useNavigate();
@@ -32,13 +33,6 @@ function Apanel():JSX.Element{
   return(
     <div>
       Apanel
-    </div>
-  );
-};
-function In():JSX.Element{
-  return(
-    <div>
-      logIn
     </div>
   );
 };
