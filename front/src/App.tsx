@@ -38,7 +38,7 @@ function Apanel():JSX.Element{
 function In():JSX.Element{
   return(
     <div>
-      logUp
+      logIn
     </div>
   );
 };
